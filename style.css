@@ -7,9 +7,10 @@
 }
 
 /* padronização de cores */
-html{
-    /* variáveis do CSS */
-    --corPrimaria: #017143;
+html {
+
+    /* variáveis do css */
+    --corPrimaria:#017143;
 
     --corSecundaria: #333;
 
@@ -17,30 +18,29 @@ html{
 }
 
 /* Container principal */
-
 main{
-    position:relative;
+    position: relative;
     width: 100%;
     min-height: 100vh;
     padding: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* 'var' é para chamar a variavel no codigo */
     background-color: var(--corTerciaria);
 }
 
-/* header (cabeçalho */
+/* Header (cabeçalho) */
 header{
-    position: absolute;
-    top: 0;
-    left: 0;
+    position:absolute;
+    top:0;
+    left:0;
     width: 100%;
     padding: 20px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 header .logo{
     position: relative;
     max-width: 80px;
@@ -48,7 +48,6 @@ header .logo{
 header .logo:hover{
     filter: invert(0.1);
 }
-
 header ul li{
     list-style: none;
 }
@@ -57,7 +56,8 @@ header ul{
     display: flex;
 }
 header ul li a{
-    /* garante que o elemento sejá renderizado em linha dentro do bloco */
+    /* garante que o elemento seja renderizado
+    em linha dentro do bloco */
     display: inline-block;
     color: var(--corSecundaria);
     font-size: 20px;
@@ -66,12 +66,14 @@ header ul li a{
     text-decoration: none;
     padding: 5px;
 }
-/* hover dos links do header (cabeçalho) */
+/* hover dos links do cabeçalho */
 header ul li a:hover{
-    background-color: var(--corPrimaria);
+    background-color: var(--corPrimaria) ;
     color: var(--corTerciaria);
     border-radius: 7px;
 }
+
+/* conteúdo principal */
 .conteudo{
     position: relative;
     width: 100%;
@@ -84,7 +86,7 @@ header ul li a:hover{
     /* limita o espaço do texto */
     max-width: 600px;
 }
-.conteudo .textoPrincipal h2{
+.conteudo .textoPrincipal h2 {
     color: var(--corSecundaria);
     /* 1em = 1vez o tamanho da fonte do elemento */
     /* 16px*2.5= 40px */
@@ -93,7 +95,7 @@ header ul li a:hover{
     line-height: 1.5em;
     font-weight: 500;
 }
-.conteudo .textoPrincipal h2 span{
+.conteudo .textoPrincipal h2 span {
     color: var(--corPrimaria);
     font-size: 1.2em;
     font-weight: 900;
@@ -103,7 +105,7 @@ header ul li a:hover{
 }
 .conteudo .textoPrincipal a{
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 20px; 
     padding: 8px 20px;
     background-color: var(--corPrimaria);
     color: var(--corTerciaria);
@@ -115,11 +117,12 @@ header ul li a:hover{
 .conteudo .textoPrincipal a:hover{
     background-color: var(--corSecundaria);
     color: var(--corTerciaria);
-    text-decoration: none;
     border-radius: 40px;
     font-weight: 500;
+    text-decoration: none;
 }
-/* imagem copo grande */
+
+/* imagem do copo grande 🍦 */
 .conteudo .imgBox{
     width: 600px;
     display: flex;
@@ -130,8 +133,9 @@ header ul li a:hover{
 .conteudo .imgBox img{
     max-width: 340px;
 }
-/* copos menores */
-.sorvetes{
+
+/* copos menores 🍦 */
+.sorvetes {
     position: absolute;
     left: 50%;
     bottom: 20px;
@@ -145,12 +149,13 @@ header ul li a:hover{
     cursor: pointer;
     transition: 0.5s;
 }
-.sorvetes li:hover{
+.sorvetes li:hover {
     transform: translateY(-15px);
 }
 .sorvetes li img{
     max-width: 60px;
 }
+
 /* redes sociais */
 .sociais{
     position: absolute;
@@ -162,38 +167,40 @@ header ul li a:hover{
     justify-content: center;
     align-items: center;
 }
-.sociais li{
+.sociais li {
     list-style: none;
 }
 #threads{
     height: 40px;
 }
 .sociais li a{
-    display: inline-block;
+    display:inline-block;
     margin: 5px 0;
-    /* alterar a escala de tamanho */
+    /* altera a escala de tamanho */
     transform: scale(0.6);
-    /* inverter a cor para branco */
+    /* inverte a cor para branco */
     filter: invert(1);
 }
 .sociais li a:hover{
     color: var(--corSecundaria);
     filter: invert(0);
 }
+
 /* circulo */
 .circulo{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height:100%;
     background: var(--corPrimaria);
+
     /* tamanho --> lado --> posição */
     clip-path: circle(600px at right 800px);
 }
 
-/* responsividade */
-@media (max-width:992px){
+/* ******Responsividade******** */
+@media (max-width: 992px){
     header{
         padding: 20px;
     }
@@ -204,21 +211,22 @@ header ul li a:hover{
         /* oculta a exibição da lista */
         display: none;
     }
-    /* menu hamburguer */
+
+    /* menu hambúrguer */
     .toggle{
         position: relative;
         width: 30px;
         height: 30px;
         cursor: pointer;
+        /* preenchido com a imagem do menu hambúrguer */
         background: url(assets/menu.png);
         background-size: 30px;
         background-position: center;
         background-repeat: no-repeat;
         filter: invert(1);
         z-index: 11;
-    }
-
-    .toggle .active{
+    }    
+    .toggle.active{
         position: fixed;
         right: 20px;
         /* preenchido com a imagem de 'fechar' */
@@ -227,25 +235,27 @@ header ul li a:hover{
         background-position: center;
         background-repeat: no-repeat;
     }
-    /* lista do menu hamburguer */
+
+    /* formar a lista do menu hamburguer */
     header ul.links.active {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        height: 40%;
+        height: 30%;
         display: flex;
         flex-direction: column;
         align-items: center;
         background-color: #f2f2f2;
         z-index: 10;
     }
-    header ul li a{
+    header ul li a {
         font-size: 1.5em;
         margin: 5px 0;
     }
-     /* Conteúdo */
-     main {
+
+    /* Conteúdo */
+    main {
         padding: 20px 20px 120px;
     }
 
