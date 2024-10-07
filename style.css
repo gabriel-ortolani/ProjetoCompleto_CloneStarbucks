@@ -244,4 +244,40 @@ header ul li a:hover{
         font-size: 1.5em;
         margin: 5px 0;
     }
+     /* Conteúdo */
+     main {
+        padding: 20px 20px 120px;
+    }
+
+    .conteudo {
+        flex-direction: column; /* Joga o conteudo em coluna (Blocos) */
+        margin-top: 100px;
+    }
+
+    .conteudo .textoPrincipal h2 {
+        font-size: 2.5em;
+        margin-bottom: 15px;
+    }    
+    .conteudo .textoPrincipal {
+        max-width: 100%;
+    }    
+    .conteudo .imgBox {
+        max-width: 300px;
+
+    }    
+    .thumb li img {
+        max-width: 40px;
+    }
+    .circulo {
+        clip-path: circle(400px at center bottom);
+    }
+    .sociais {
+        /* Estiliza os sociais */
+        /* background: #017143; */
+        background: var(--corPrimaria);
+        right: 0;
+        width: 50px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
 }
